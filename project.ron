@@ -1,0 +1,19 @@
+#![enable(implicit_some, unwrap_newtypes)]
+(
+	res: "hd",
+	fps: 30,
+	inputs: [
+    ],
+	shaders: {
+		"post": "post",
+	},
+	chains: [
+		(
+			id: "main",
+			layers: [
+				( fx: "post" ),
+			],
+		),
+	],
+	output: ( id: "main" ),
+)

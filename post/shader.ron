@@ -1,0 +1,25 @@
+#![enable(implicit_some)]
+(
+	meta: (
+		id: "post",
+		name: "PostProcessing",
+		description: "This is the Team210 post processing collection. It is available under GPLv3; see LICENSE for details.",
+		tags: [
+			"team210, demoscene, post, processing, effects",
+		],
+	),
+	passes: {
+		Image: (
+			inputs: [
+				(
+					asset: Texture(Abstract1),
+					sampler: Custom((
+						filter: nearest,
+						wrap: clamp,
+						vflip: true,
+					)),
+				),
+			],
+		),
+	},
+)
